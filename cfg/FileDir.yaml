@@ -1,0 +1,23 @@
+file_path:  /home/cui-dell/catkin_ws/src/livox_fuse/cfg/extrinsics/cat/
+
+extrinsic_names:
+  - front_horizon80_to_novatel.yaml
+  - back_horizon80_to_novatel.yaml
+  - left_back_mid40_to_novatel.yaml
+  - left_front_mid40_to_novatel.yaml
+  - right_front_mid40_to_novatel.yaml
+  - right_back_mid40_to_novatel.yaml
+  - up_left_to_novatel.yaml
+  - up_mid_to_novatel.yaml
+  - up_right_to_novatel.yaml
+
+topic_names:
+  - /livox_lidar_front/PointCloud2
+  - /livox_lidar_back/PointCloud2
+  - /livox_lidar_left_back/PointCloud2                          
+  - /livox_lidar_left_front/PointCloud2                           
+  - /livox_lidar_right_back/PointCloud2                          
+  - /livox_lidar_right_front/PointCloud2                         
+  - /livox_lidar_up_left/PointCloud2                              
+  - /livox_lidar_up_mid/PointCloud2                               
+  - /livox_lidar_up_right/PointCloud2

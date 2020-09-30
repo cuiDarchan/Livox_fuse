@@ -1,0 +1,7 @@
+<launch>
+    <!-- Load parameters -->
+    <rosparam command="load" ns="FileDir" file="$(find livox_fuse)/cfg/FileDir.yaml"/>
+
+    <node pkg="livox_fuse" type="livox_fuse_node" name="livox_fuse_node" output="screen" />
+
+</launch>
