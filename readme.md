@@ -12,11 +12,11 @@ Follow [PCL Installation](http://www.pointclouds.org/downloads/linux.html).
 
 ## 2. 使用方法
 ### 2.1  **配置文件**
-cfg/extrinsics: 包含激光的yaml外参文件，这里包含cat和zhdl两种车型
-FileDir.yaml:
-    file_path: 外参存放绝对路径，注意包含cat/zhdl
-    extrinsic_names: 激光外参的文件名
-    topic_names: 激光数据的topic名字，注意与上面的extrinsic_names对应.
+cfg/extrinsics: 包含激光的yaml外参文件，这里包含cat和zhdl两种车型  
+FileDir.yaml:  
+    file_path: 外参存放绝对路径，注意包含cat/zhdl  
+    extrinsic_names: 激光外参的文件名  
+    topic_names: 激光数据的topic名字，注意与上面的extrinsic_names对应.  
 ### 2.2  **具体步骤**
 ```
 cd catkin_ws
