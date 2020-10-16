@@ -1,0 +1,2 @@
+SimpleLonDebug simple_lon_debug
+SimpleLatDebug simple_lat_debug

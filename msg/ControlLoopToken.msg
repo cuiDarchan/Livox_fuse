@@ -1,0 +1,3 @@
+uint64 dcu_token
+uint64 hmi_token
+uint64 measurable_token

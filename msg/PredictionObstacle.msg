@@ -1,0 +1,4 @@
+PerceptionObstacle perception_obstacle
+time gps_timestamp
+float32 predicted_period
+Trajectory[] trajectories

@@ -1,0 +1,3 @@
+float32 measured_timestamp
+float32[3] position
+Quaterniond orientation

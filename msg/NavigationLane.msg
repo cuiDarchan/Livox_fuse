@@ -1,0 +1,17 @@
+    string id
+    Curved central_curve
+    LaneSampleAssociation[] left_samples
+    LaneSampleAssociation[] right_samples
+    uint16 type
+    float32 speed_limit
+    NavigationLaneBoundary left_boundary
+    NavigationLaneBoundary right_boundary
+    string[] predecessor_id
+    string[] sucessor_id
+    string[] left_neighbor_id
+    string[] right_neighbor_id
+    CurveSign[] curve_signs
+    PolygonSign[] polygon_signs
+    Signal[] signals
+    ParkingSpace[] parking_spaces
+    uint16 turn

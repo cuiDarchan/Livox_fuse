@@ -1,0 +1,2 @@
+float32 probability
+TrajectoryPoint[] trajectory_points

@@ -1,0 +1,3 @@
+uint16 STOP = 0
+uint16 GO = 1
+uint16 NOT_CALCULATED = 15

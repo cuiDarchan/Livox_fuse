@@ -1,0 +1,6 @@
+float32 upper_left_x
+float32 upper_left_y
+float32 lower_right_x
+float32 lower_right_y
+string label
+float32 confidence

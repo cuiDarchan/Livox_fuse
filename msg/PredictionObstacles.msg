@@ -1,0 +1,5 @@
+MsgHeader header
+PredictionObstacle[] prediction_obstacles
+time start_timestamp
+time end_timestamp
+Localization localization

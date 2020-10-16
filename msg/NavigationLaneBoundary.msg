@@ -1,0 +1,2 @@
+LaneBoundaryType[] type
+Curved segments
