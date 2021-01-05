@@ -24,3 +24,10 @@ catkin_make -DCATKIN_WHITELIST_PACKAGES="livox_fuse"
 roslaunch livox_fuse livox_fuse.launch
 rosbag play *.bag
 ``` 
+## 3. 样例数据
+样例数据保存在data目录下，内含9路激光topic和定位数据 
+```
+tar -xvf test.bag.tar.gz  
+```
+注意： 
+本工具最高支持9路激光topic   
