@@ -6,12 +6,12 @@ header:
   frame_id: novatel
 transform:
   translation:
-    x: -1.628679
+    x: -2.333679
     y: 1.064958
-    z: 1.360645
+    z: 1.060645
   rotation:
-    x: -0.392635
-    y: -0.499791
-    z: 0.696722
-    w: 0.332605
+    x: -0.260843
+    y: 0.090233
+    z: 0.960971
+    w: 0.021530
 child_frame_id: left_back_mid40

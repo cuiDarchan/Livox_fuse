@@ -6,7 +6,7 @@ header:
   frame_id: novatel
 transform:
   translation:
-    x: 0.551528
+    x: 0.186528
     y: 1.002544
     z: 1.521647
   rotation:
