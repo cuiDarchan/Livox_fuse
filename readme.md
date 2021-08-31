@@ -12,11 +12,13 @@ Follow [PCL Installation](http://www.pointclouds.org/downloads/linux.html).
 
 ## 2. 使用方法
 ### 2.1  **配置文件**
-cfg/extrinsics: 包含激光的yaml外参文件，这里包含cat和zhdl两种车型  
+cfg/extrinsics: 包含激光的yaml外参文件 
 FileDir.yaml:  
-    file_path: 外参存放绝对路径，注意包含cat/zhdl  
-    extrinsic_names: 激光外参的文件名  
-    topic_names: 激光数据的topic名字，注意与上面的extrinsic_names对应.  
+    is_compensator: 融合数据前，是否开启运动补偿  
+    pub_topic_names: 发布的融合后的两类激光topic  
+    LidarInfos: 激光配置的数组，可自由组合（暂时支持两类激光各最多5路）
+                每一类激光包括：类型，原始topic名，frame_id，外参文件名  
+
 ### 2.2  **具体步骤**
 ```
 cd catkin_ws
@@ -25,9 +27,9 @@ roslaunch livox_fuse livox_fuse.launch
 rosbag play *.bag
 ``` 
 ## 3. 样例数据
-样例数据保存在data目录下，内含9路激光topic和定位数据 
+样例数据保存在data目录下，
+    test1：包含9路大疆topic和定位数据;
+    test2：包含4路速腾和3路大疆激光 
 ```
 tar -xvf test.bag.tar.gz  
-```
-注意： 
-本工具最高支持9路激光topic   
+```   

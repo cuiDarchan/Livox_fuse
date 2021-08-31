@@ -18,84 +18,85 @@ find_package(catkin REQUIRED COMPONENTS
   tf2_ros
   tf
   message_generation
+  roslib
 )
 
-add_message_files(
-	FILES
-	MeasureState.msg
-	LocalizationStatus.msg
-	Uncertainty.msg
-	ModuleStatus.msg
-	ModuleName.msg
-	MsgHeader.msg
-	Quaterniond.msg
-	Quaternionf.msg
-	Localization.msg
-	IMURaw.msg
-	INSRaw.msg
-	INSStdevRaw.msg
-	MobileyeObstaclesGo.msg
-	MobileyeObstacle.msg
-	MobileyeObstacles.msg
-	RadarRaw.msg
-	RadarRawObject.msg
-	Point3d.msg
-	PerceptionObstacle.msg
-	PerceptionObstacles.msg
-	SimpleLatDebug.msg
-	SimpleLonDebug.msg
-	Debug.msg
-	EpbCmd.msg
-	PassageTurn.msg
-	WayPoint.msg
-	Control.msg	
-	HMIInput.msg
-    Lanemarkers.msg
-	Lanemarker.msg
-	LaneParam.msg
-	MobileyeLanemarkers.msg
-	MobileyeLanemarker.msg
-	VideoEncodedData.msg
-	PathPoint.msg
-	TrajectoryPoint.msg
-	Trajectory.msg
-	PredictionObstacle.msg
-	PredictionObstacles.msg
-	CameraDetection.msg
-	Detection.msg
-	UltrasonicRaws.msg
-	UltrasonicRawObject.msg
-	ChassisInfo.msg
-	Odometry.msg
-	Curved.msg
-	CurveSign.msg
-	JunctionROIPolygon.msg
-	LaneBoundaryType.msg
-	LaneSampleAssociation.msg
-	NavigationLane.msg
-	NavigationLaneBoundary.msg
-	NavigationMap.msg
-	Passage.msg
-	PassageSpeed.msg
-	PassageType.msg
-	PolygonSign.msg
-	RoadROIBoundary.msg
-	ROIRegion.msg
-	Signal.msg
-	Vec3d.msg
-	BestGnssPos.msg
-	Heading.msg
-	Transform.msg
-	ControlLoopToken.msg
-	EncodePointCloud.msg
-	GearCmd.msg
-	LightCmd.msg
-    PadMessage.msg
-	ParkingSpace.msg
-	VehicleSignalCmd.msg
-	WiperCmd.msg
-	ADCTrajectory.msg	
-)
+#add_message_files(
+#	FILES
+#	MeasureState.msg
+#	LocalizationStatus.msg
+#	Uncertainty.msg
+#	ModuleStatus.msg
+#	ModuleName.msg
+#	MsgHeader.msg
+#	Quaterniond.msg
+#	Quaternionf.msg
+#	Localization.msg
+#	IMURaw.msg
+#	INSRaw.msg
+#	INSStdevRaw.msg
+#	MobileyeObstaclesGo.msg
+#	MobileyeObstacle.msg
+#	MobileyeObstacles.msg
+#	RadarRaw.msg
+#	RadarRawObject.msg
+#	Point3d.msg
+#	PerceptionObstacle.msg
+#	PerceptionObstacles.msg
+#	SimpleLatDebug.msg
+#	SimpleLonDebug.msg
+#	Debug.msg
+#	EpbCmd.msg
+#	PassageTurn.msg
+#	WayPoint.msg
+#	Control.msg	
+#	HMIInput.msg
+#    Lanemarkers.msg
+#	Lanemarker.msg
+#	LaneParam.msg
+#	MobileyeLanemarkers.msg
+#	MobileyeLanemarker.msg
+#	VideoEncodedData.msg
+#	PathPoint.msg
+#	TrajectoryPoint.msg
+#	Trajectory.msg
+#	PredictionObstacle.msg
+#	PredictionObstacles.msg
+#	CameraDetection.msg
+#	Detection.msg
+#	UltrasonicRaws.msg
+#	UltrasonicRawObject.msg
+#	ChassisInfo.msg
+#	Odometry.msg
+#	Curved.msg
+#	CurveSign.msg
+#	JunctionROIPolygon.msg
+#	LaneBoundaryType.msg
+#	LaneSampleAssociation.msg
+#	NavigationLane.msg
+#	NavigationLaneBoundary.msg
+#	NavigationMap.msg
+#	Passage.msg
+#	PassageSpeed.msg
+#	PassageType.msg
+#	PolygonSign.msg
+#	RoadROIBoundary.msg
+#	ROIRegion.msg
+#	Signal.msg
+#	Vec3d.msg
+#	BestGnssPos.msg
+#	Heading.msg
+#	Transform.msg
+#	ControlLoopToken.msg
+#	EncodePointCloud.msg
+#	GearCmd.msg
+#	LightCmd.msg
+#    PadMessage.msg
+#	ParkingSpace.msg
+#	VehicleSignalCmd.msg
+#	WiperCmd.msg
+#	ADCTrajectory.msg	
+#)
 
 generate_messages(
   DEPENDENCIES
@@ -103,10 +104,9 @@ generate_messages(
 )
 
 catkin_package(
-   INCLUDE_DIRS include
    CATKIN_DEPENDS roscpp std_msgs 
    CATKIN_DEPENDS message_runtime
-   DEPENDS system_lib
+   DEPENDS
 )
 
 include_directories(
@@ -117,7 +117,7 @@ include_directories(
   ${EIGEN3_INCLUDE_DIR}
 )
 
-add_executable(${PROJECT_NAME}_node src/node.cpp)
+add_executable(${PROJECT_NAME}_node src/node.cpp src/lidar_fuse.cpp)
 add_dependencies(${PROJECT_NAME}_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 target_link_libraries(${PROJECT_NAME}_node 
    ${catkin_LIBRARIES}

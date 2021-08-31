@@ -1,0 +1,18 @@
+header:
+  stamp:
+    secs: 1615515827
+    nsecs: 0
+  seq: 0
+  frame_id: novatel
+child_frame_id: rslidar_16_right
+
+transform:
+  translation:
+    x: 1.10191
+    y: 0.00528139
+    z: -1.25908
+  rotation:
+    x: 0.00530831
+    y: 0.00621212
+    z: 0.199098
+    w: 0.979945

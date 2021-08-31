@@ -55,6 +55,7 @@
         "typeindex": "cpp",
         "typeinfo": "cpp",
         "core": "cpp",
-        "random": "cpp"
+        "random": "cpp",
+        "*.ipp": "cpp"
     }
 }

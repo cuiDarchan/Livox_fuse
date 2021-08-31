@@ -1,23 +1,74 @@
-file_path:  /home/cui-dell/catkin_ws/src/livox_fuse/cfg/extrinsics/zhdl/
+is_compensator: false
 
-extrinsic_names:
-  - front_horizon80_to_novatel.yaml
-  - back_horizon80_to_novatel.yaml
-  - left_back_mid40_to_novatel.yaml
-  - left_front_mid40_to_novatel.yaml
-  - right_back_mid40_to_novatel.yaml
-  - right_front_mid40_to_novatel.yaml
-  - up_left_to_novatel.yaml
-  - up_mid_to_novatel.yaml
-  - up_right_to_novatel.yaml
+pub_topic_names:
+  livox: /livox_lidar_front/compensator/PointCloud2
+  rslidar: /rslidar_fuse_32/PointCloud2
 
-topic_names:
-  - /livox_lidar_front/PointCloud2
-  - /livox_lidar_back/PointCloud2
-  - /livox_lidar_right_front/PointCloud2  #21                          
-  - /livox_lidar_left_front/PointCloud2                           
-  - /livox_lidar_right_back/PointCloud2                          
-  - /livox_lidar_left_back/PointCloud2                       
-  - /livox_lidar_up_left/PointCloud2                              
-  - /livox_lidar_up_mid/PointCloud2                               
-  - /livox_lidar_up_right/PointCloud2
+LidarInfos:
+  - lidar_type: rslidar
+    lidar_topic: /rslidar_left_16/PointCloud2
+    frame_id: rslidar_left
+    extrinsic_name: velodyne16_left_novatel_extrinsics.yaml
+  
+  - lidar_type: rslidar
+    lidar_topic: /rslidar_right_16/PointCloud2
+    frame_id: rslidar_right
+    extrinsic_name: velodyne16_right_novatel_extrinsics.yaml
+  
+  - lidar_type: rslidar
+    lidar_topic: /rslidar_bpearl_left/PointCloud2
+    frame_id: rslidar_bpearl_left
+    extrinsic_name: bpearl_left_novatel_extrinsics.yaml
+
+  - lidar_type: rslidar
+    lidar_topic: /rslidar_bpearl_right/PointCloud2
+    frame_id: rslidar_bpearl_right
+    extrinsic_name: bpearl_right_novatel_extrinsics.yaml
+ 
+
+  - lidar_type: livox
+    lidar_topic: /livox_lidar_front/PointCloud2
+    frame_id: livox_forward
+    extrinsic_name: front_horizon80_to_novatel.yaml
+  
+  - lidar_type: livox
+    lidar_topic: /livox_lidar_back/PointCloud2
+    frame_id: livox_back
+    extrinsic_name: back_horizon80_to_novatel.yaml
+
+  - lidar_type: livox
+    lidar_topic: /livox_lidar_up_mid/PointCloud2
+    frame_id: livox_up_mid
+    extrinsic_name: up_mid_to_novatel.yaml
+
+#############    mine_truck    ###################
+#  - lidar_type: livox
+#    lidar_topic: /livox_lidar_up_left/PointCloud2
+#    frame_id: livox_up_left
+#    extrinsic_name: up_left_to_novatel.yaml
+#
+#  - lidar_type: livox
+#    lidar_topic: /livox_lidar_up_right/PointCloud2
+#    frame_id: livox_up_right
+#    extrinsic_name: up_right_to_novatel.yaml 
+
+
+#  - lidar_type: livox
+#    lidar_topic: /livox_lidar_left_back/PointCloud2
+#    frame_id: livox_left_back
+#    extrinsic_name: left_back_mid40_to_novatel.yaml 
+#
+#  - lidar_type: livox
+#    lidar_topic: /livox_lidar_left_front/PointCloud2
+#    frame_id: livox_left_front
+#    extrinsic_name: left_front_mid40_to_novatel.yaml 
+#
+#  - lidar_type: livox
+#    lidar_topic: /livox_lidar_right_back/PointCloud2
+#    frame_id: livox_right_back
+#    extrinsic_name: right_back_mid40_to_novatel.yaml
+#
+#  - lidar_type: livox
+#    lidar_topic: /livox_lidar_right_front/PointCloud2
+#    frame_id: livox_right_front
+#    extrinsic_name: right_front_mid40_to_novatel.yaml
